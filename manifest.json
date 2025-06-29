@@ -1,0 +1,56 @@
+{
+    "name": "Global Mute for Google Meet",
+    "description": "Universal mute toggle for Google Meet.",
+    "version": "1.0",
+    "manifest_version": 3,
+    "permissions": [
+        "activeTab",
+        "storage",
+        "notifications",
+        "scripting"
+    ],
+    "host_permissions": [
+        "https://meet.google.com/*"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "icon.png",
+            "48": "icon48.png",
+            "128": "icon128.png"
+        }
+    },
+    "commands": {
+        "toggle-mic": {
+            "suggested_key": {
+                "default": "Ctrl+Shift+5"
+            },
+            "description": "Toggle microphone in Google Meet"
+        },
+        "switch-to-meet": {
+            "suggested_key": {
+                "default": "Ctrl+Shift+2"
+            },
+            "description": "Switch to active Google Meet tab"
+        },
+        "go-to-meet-home": {
+            "suggested_key": {
+                "default": "Ctrl+Shift+1"
+            },
+            "description": "Navigate to Google Meet home screen"
+        }
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://meet.google.com/*"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ]
+}
