@@ -55,7 +55,7 @@ Built using Manifest V3 with clean code and customizable hotkeys.
 ---
 
 ## 📁 Folder Structure
-MuteForMeetMV3/
+<pre>MuteForMeetMV3/
 ├── manifest.json
 ├── background.js
 ├── content.js
@@ -65,7 +65,7 @@ MuteForMeetMV3/
 ├── icon48.png
 ├── icon128.png
 └── screenshots/
-└── global-shortcut-setup.png
+└──── global-shortcut-setup.png</pre>
 
 ---
 
